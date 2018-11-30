@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Card, CardBody } from "reactstrap"
 import Contact from "../Content/Contact"
-import Writing from "../Content/Writing/Writing"
+import Writing from "../Content/Writing"
 
 const Main = props => {
   let pageContent = "About"
