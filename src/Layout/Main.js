@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Card, CardBody } from "reactstrap"
 import Contact from "../Content/Contact"
-import Skills from "../Content/Skills/Skills"
-import Demos from "../Content/Demos/Demos"
+import Writing from "../Content/Writing/Writing"
 
 const Main = props => {
   let pageContent = "About"
@@ -15,14 +14,11 @@ const Main = props => {
     case "Contact":
       pageContent = <Contact />
       break
-    case "Skills":
-      pageContent = <Skills />
-      break
-    case "Demos":
-      pageContent = <Demos />
+    case "Writing":
+      pageContent = <Writing />
       break
     default:
-      pageContent = <About />
+      pageContent = <Writing />
       break
   }
   return (
