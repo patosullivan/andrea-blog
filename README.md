@@ -1,6 +1,6 @@
-# My personal website
+# Andrea's blog
 
-See it live at [patrick.osullivan.io](http://patrick.osullivan.io).
+The website for my wife, Andrea. See it live at [andrea.osullivan.io](http://andrea.osullivan.io).
 
 ## Built Using
 
