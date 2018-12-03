@@ -1,7 +1,7 @@
 import About from "../Content/About"
 import PropTypes from "prop-types"
 import React from "react"
-import { Card, CardBody } from "reactstrap"
+import {Card, CardBody} from "reactstrap"
 import Contact from "../Content/Contact"
 import Writing from "../Content/Writing/Writing"
 
@@ -22,8 +22,8 @@ const Main = props => {
       break
   }
   return (
-    <main className="py-2">
-      <Card>
+    <main className="py-0">
+      <Card className="border-top-0 rounded-0">
         <CardBody>{pageContent}</CardBody>
       </Card>
     </main>
