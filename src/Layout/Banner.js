@@ -2,7 +2,7 @@ import React from "react"
 import {Jumbotron} from "reactstrap"
 
 const jumboStyle = {
-  backgroundImage: "url(./angularBuilding.jpg)",
+  backgroundImage: "url(./triangles.jpg)",
   backgroundAttachment: "fixed",
   backgroundPosition: "bottom",
   backgroundRepeat: "no-repeat",
@@ -11,9 +11,13 @@ const jumboStyle = {
 }
 
 const Banner = () => (
-  <Jumbotron className="my-2 text-center text-white" style={jumboStyle}>
+  <Jumbotron
+    className="my-2 text-center text-black rounded-0"
+    style={jumboStyle}>
     <h1 className="display-4">{"Andrea O'Sullivan"}</h1>
-    <p className="lead text-monospace">Technology and Public Policy</p>
+    <p className="lead" style={{fontFamily: "'Montserrat', sans-serif"}}>
+      Technology and Public Policy
+    </p>
   </Jumbotron>
 )
 
