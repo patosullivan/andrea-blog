@@ -1,6 +1,6 @@
 import ProptTypes from "prop-types"
 import React from "react"
-import { Card, CardHeader, CardTitle, CardBody, CardFooter } from "reactstrap"
+import {Card, CardHeader, CardTitle, CardBody, CardFooter} from "reactstrap"
 
 const PostCard = props => (
   <Card>
@@ -8,7 +8,7 @@ const PostCard = props => (
       <CardTitle>{props.title}</CardTitle>
     </CardHeader>
     <CardBody>
-      <p>{props.body}</p>
+      <p style={{fontFamily: "'Montserrat', sans-serif"}}>{props.body}</p>
     </CardBody>
     <CardFooter>{props.date}</CardFooter>
   </Card>
