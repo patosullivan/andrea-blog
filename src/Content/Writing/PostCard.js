@@ -1,6 +1,7 @@
 import ProptTypes from "prop-types"
 import React from "react"
 import {Card, CardHeader, CardTitle, CardBody, CardFooter} from "reactstrap"
+import ReactMarkdown from "react-markdown"
 
 const PostCard = props => (
   <Card>
@@ -8,7 +9,7 @@ const PostCard = props => (
       <CardTitle>{props.title}</CardTitle>
     </CardHeader>
     <CardBody>
-      <p style={{fontFamily: "'Montserrat', sans-serif"}}>{props.body}</p>
+      <ReactMarkdown source={props.body} />
     </CardBody>
     <CardFooter>{props.date}</CardFooter>
   </Card>
