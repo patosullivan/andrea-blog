@@ -1,6 +1,6 @@
 # Andrea's blog
 
-The website for my wife, Andrea. See it live at [andrea.osullivan.io](http://andrea.osullivan.io).
+The front end for my wife's blog. See it live at [andrea.osullivan.io](http://andrea.osullivan.io).
 
 ## Built Using
 
@@ -19,3 +19,7 @@ Bootstrap v4.1, with custom Sass variables.
 ### Netlify
 
 A continuous deployment process via Netlify.
+
+#### The backend:
+
+The backend was created by using digital ocean, docker, docker-machine (to provision the DO droplet), and docker compose. The CMS app itself is [strapi](https://github.com/strapi/strapi), the database is MongoDB, and it's all sitting behind a nginx-proxy. I'm using Let's Encrypt for the SSL cert.
