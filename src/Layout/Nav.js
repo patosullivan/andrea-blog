@@ -10,7 +10,6 @@ const Nav = props => (
         <NavLink
           exact={true}
           to={page == "About" ? "/" : `/${page}`}
-          onClick={() => props.setPage(page)}
           activeClassName="active"
           tag={RRNavLink}
         >
