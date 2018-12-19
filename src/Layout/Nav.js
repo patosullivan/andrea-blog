@@ -22,7 +22,6 @@ const Nav = props => (
 )
 
 Nav.propTypes = {
-  page: PropTypes.string,
   pages: PropTypes.array,
   setPage: PropTypes.func
 }
