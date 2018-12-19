@@ -1,15 +1,19 @@
-import {Nav as RSNav, NavItem, NavLink} from "reactstrap"
+import { Nav as RSNav, NavItem, NavLink } from "reactstrap"
 import PropTypes from "prop-types"
 import React from "react"
+import { NavLink as RRNavLink } from "react-router-dom"
 
 const Nav = props => (
   <RSNav tabs fill>
     {props.pages.map((page, index) => (
       <NavItem key={index}>
         <NavLink
-          href="#"
+          exact={true}
+          to={page == "About" ? "/" : `/${page}`}
           onClick={() => props.setPage(page)}
-          active={page == props.page ? true : false}>
+          activeClassName="active"
+          tag={RRNavLink}
+        >
           {page}
         </NavLink>
       </NavItem>
