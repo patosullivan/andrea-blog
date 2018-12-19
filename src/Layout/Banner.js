@@ -7,7 +7,6 @@ const jumboStyle = css`
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  fontFamily: 'Merriweather', serif";
 `
 
 const nameStyle = css`
@@ -16,6 +15,7 @@ const nameStyle = css`
     font-weight: 300;
     line-height: 1.2;
   }
+  font-family: "Merriweather", serif;
 `
 
 const summaryStyle = css`
