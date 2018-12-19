@@ -3,7 +3,6 @@ import { Jumbotron } from "reactstrap"
 
 const jumboStyle = {
   backgroundImage: "url(./triangles.jpg)",
-  backgroundAttachment: "fixed",
   backgroundPosition: "bottom",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
