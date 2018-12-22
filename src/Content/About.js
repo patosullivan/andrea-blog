@@ -1,11 +1,16 @@
 import andrea from "./andrea.jpg"
 import React from "react"
-import {Col, Row} from "reactstrap"
+import { Col, Row } from "reactstrap"
 
 const About = () => (
   <Row>
     <Col>
-      <img src={andrea} className="w-100 rounded float-right" />
+      <img
+        src={andrea.src}
+        srcSet={andrea.srcSet}
+        alt="Andrea at the top of Cerro San Cristobal, in Santiago, Chile"
+        className="w-100 rounded float-right"
+      />
     </Col>
     <Col sm>
       <br />
