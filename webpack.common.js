@@ -72,8 +72,17 @@ module.exports = {
         use: [
           {
             loader: "file-loader"
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: {
+          loader: "responsive-loader",
+          options: {
+            sizes: [268, 290, 323, 345, 373, 395, 528, 1140],
+            placeholder: true,
+            placeholderSize: 50,
+            name: "imgs/[name]-[width].[ext]"
           }
-        ]
+        }
       }
     ]
   },
