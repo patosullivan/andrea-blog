@@ -68,10 +68,10 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: "file-loader"
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
       {
         test: /\.(png|jpg|gif)$/,
         use: {
