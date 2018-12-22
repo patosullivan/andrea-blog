@@ -26,7 +26,7 @@ module.exports = {
       test: /\.(jpe?g|png|gif|svg)$/i,
       plugins: [
         imageminMozjpeg({
-          quality: 30,
+          quality: 80,
           progessive: true
         })
       ]
@@ -79,8 +79,7 @@ module.exports = {
           options: {
             sizes: [268, 290, 323, 345, 373, 395, 528, 1140],
             placeholder: true,
-            placeholderSize: 50,
-            name: "imgs/[name]-[width].[ext]"
+            placeholderSize: 50
           }
         }
       }
