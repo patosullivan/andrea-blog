@@ -2,11 +2,22 @@ import React from "react"
 import { Jumbotron } from "reactstrap"
 import { css } from "@emotion/core"
 
+const triangles345 = require("./triangles.jpg?size=345")
+const triangles = require("./triangles.jpg?size=1140")
+const triangles395 = require("./triangles.jpg?size=395")
+
 const jumboStyle = css`
-  background-image: url(./triangles.jpg);
+  background-image: url("${triangles.src}");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: 375px) {
+    background-image: url("${triangles345.src}");
+  }
+  @media (max-width: 425px) {
+    background-image: url("${triangles395.src}");
+  }
+
 `
 
 const nameStyle = css`

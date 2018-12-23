@@ -1,4 +1,4 @@
-import Banner from "./Layout/Banner"
+import Banner from "./Layout/Banner/Banner"
 import Footer from "./Layout/Footer"
 import Main from "./Layout/Main"
 import Nav from "./Layout/Nav"

@@ -2,16 +2,31 @@ const path = require("path")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 const ImageminPlugin = require("imagemin-webpack-plugin").default
 const imageminMozjpeg = require("imagemin-mozjpeg")
+const ManifestPlugin = require("webpack-manifest-plugin")
+const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin")
 
 module.exports = {
   context: __dirname,
   plugins: [
+    new SWPrecacheWebpackPlugin({
+      cacheId: "andrea",
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: "service-worker.js",
+      minify: true,
+      navigateFallback: "./index.html",
+      staticFileGlobsIgnorePatterns: [
+        /_redirects/,
+        /_headers/,
+        /asset-manifest\.json$/
+      ]
+    }),
+    new ManifestPlugin({ fileName: "asset-manifest.json" }),
     new CopyWebpackPlugin([{ from: "./public/", to: "./" }]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
       plugins: [
         imageminMozjpeg({
-          quality: 30,
+          quality: 80,
           progessive: true
         })
       ]
@@ -53,12 +68,20 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: "file-loader"
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: {
+          loader: "responsive-loader",
+          options: {
+            sizes: [268, 290, 323, 345, 373, 395, 528, 1140],
+            placeholder: true,
+            placeholderSize: 50
           }
-        ]
+        }
       }
     ]
   },
