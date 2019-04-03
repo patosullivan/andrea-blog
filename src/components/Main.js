@@ -1,8 +1,8 @@
-import About from "../Content/About"
+import About from "../views/About"
 import React from "react"
 import { Card, CardBody } from "reactstrap"
-import Contact from "../Content/Contact"
-import Writing from "../Content/Writing/Writing"
+import Contact from "../views/Contact"
+import Writing from "../views/Writing/Writing"
 import { Switch, Route } from "react-router-dom"
 
 const Main = () => {
