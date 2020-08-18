@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.dev.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.13.0",
     "file-loader": "^2.0.0",
-    "http-server": "^0.11.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "jimp": "^0.6.4",
@@ -37,6 +36,7 @@
     "sw-precache-webpack-plugin": "^0.11.5",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "^2.0.4",
     "webpack-merge": "^4.2.1"
   },
@@ -50,6 +50,7 @@
     "babel-plugin-emotion": "^10.0.9",
     "bootstrap": "^4.3.1",
     "dayjs": "^1.8.13",
+    "jpegtran-bin": "^5.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.8",
